@@ -80,7 +80,7 @@
                 {% endblock main %}
             </main>
             <aside class="col-md-4">
-                <!-- 这里 block 也是一个模板标签，其作用是占位。比如这里的 {% block main %}{% endblock main %} 是一个占位框，main 是我们给这个 block 取的名字。下面我们会看到 block 标签的作用。同时我们也在 aside 标签下加了一个 {% block toc %}{% endblock toc %} 占位框，因为 detail.html 中 aside 标签下会多一个目录栏。当 {% block toc %}{% endblock toc %} 中没有任何内容时，{% block toc %}{% endblock toc %} 在模板中不会显示。但当其中有内容是，模板就会显示 block 中的内容。 -->
+                <!-- 这里 block 也是一个模板标签，其作用是占位。比如这里的 block main  endblock main  是一个占位框，main 是我们给这个 block 取的名字。下面我们会看到 block 标签的作用。同时我们也在 aside 标签下加了一个 block toc endblock toc  占位框，因为 detail.html 中 aside 标签下会多一个目录栏。当 block toc  endblock toc  中没有任何内容时， block toc endblock toc  在模板中不会显示。但当其中有内容是，模板就会显示 block 中的内容。 -->
                 {% block toc %}
                 {% endblock toc %}
             </aside>
