@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.six import python_2_unicode_compatible
+from django.urls import reverse
 
 
 @python_2_unicode_compatible
@@ -40,6 +41,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    # 为了方便地生成上述的 URL，我们在 Post 类里定义一个 get_absolute_url 方法
+    # 自定义 get_absolute_url 方法
+    # 记得从 django.urls 中导入 reverse 函数
+    def get_absolute_url(self):
+        return reverse('blog:detail', kwargs={'pk': self.pk})
     # 文章标题
     title = models.CharField(max_length=70)
 
